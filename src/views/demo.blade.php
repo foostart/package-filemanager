@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Laravel Filemanager</title>
-  <link rel="shortcut icon" type="image/png" href="{{ asset('vendor/laravel-filemanager/img/folder.png') }}">
+  <link rel="shortcut icon" type="image/png" href="{{ asset('vendor/package-filemanager/img/folder.png') }}">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
@@ -51,7 +51,7 @@
     <div class="row">
       <div class="col-md-12">
         <h2>Embed file manager</h2>
-        <iframe src="/laravel-filemanager" style="width: 100%; height: 500px; overflow: hidden; border: none;"></iframe>
+        <iframe src="/package-filemanager" style="width: 100%; height: 500px; overflow: hidden; border: none;"></iframe>
       </div>
     </div>
   </div>
@@ -112,7 +112,7 @@
   </script>
 
   <script>
-    {!! \File::get(base_path('vendor/unisharp/laravel-filemanager/public/js/lfm.js')) !!}
+    {!! \File::get(base_path('vendor/foostart/package-filemanager/public/js/lfm.js')) !!}
   </script>
   <script>
     $('#lfm').filemanager('image', {prefix: route_prefix});
@@ -131,7 +131,7 @@
 
       // Define function to open filemanager window
       var lfm = function(options, cb) {
-          var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
+          var route_prefix = (options && options.prefix) ? options.prefix : '/package-filemanager';
           window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
           window.SetUrl = cb;
       };
@@ -144,7 +144,7 @@
               tooltip: 'Insert image with filemanager',
               click: function() {
 
-                  lfm({type: 'image', prefix: '/laravel-filemanager'}, function(url, path) {
+                  lfm({type: 'image', prefix: '/package-filemanager'}, function(url, path) {
                       context.invoke('insertImage', url);
                   });
 

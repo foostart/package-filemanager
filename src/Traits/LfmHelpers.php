@@ -110,7 +110,7 @@ trait LfmHelpers
         }
 
         if ($type === 'url' && $base_directory !== 'public') {
-            $prefix = config('lfm.url_prefix', config('lfm.prefix', 'laravel-filemanager')) . '/' . $prefix;
+            $prefix = config('lfm.url_prefix', config('lfm.prefix', 'package-filemanager')) . '/' . $prefix;
         }
 
         return $prefix;
@@ -447,9 +447,9 @@ trait LfmHelpers
         $is_file = is_file($item);
 
         if (! $is_file) {
-            $file_type = trans('laravel-filemanager::lfm.type-folder');
+            $file_type = trans('package-filemanager::lfm.type-folder');
             $icon = 'fa-folder-o';
-            $thumb_url = asset('vendor/laravel-filemanager/img/folder.png');
+            $thumb_url = asset('vendor/package-filemanager/img/folder.png');
         } elseif ($this->fileIsImage($item)) {
             $file_type = $this->getFileType($item);
             $icon = 'fa-image';
@@ -615,7 +615,7 @@ trait LfmHelpers
      */
     public function error($error_type, $variables = [])
     {
-        return trans('laravel-filemanager::lfm.error-' . $error_type, $variables);
+        return trans('package-filemanager::lfm.error-' . $error_type, $variables);
     }
 
     /**

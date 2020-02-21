@@ -4,8 +4,8 @@ $middleware = array_merge(\Config::get('lfm.middlewares'), [
     '\Foostart\Filemanager\Middlewares\MultiUser',
     '\Foostart\Filemanager\Middlewares\CreateDefaultFolder',
 ]);
-$prefix = \Config::get('lfm.url_prefix', \Config::get('lfm.prefix', 'laravel-filemanager'));
-$as = 'unisharp.lfm.';
+$prefix = \Config::get('lfm.url_prefix', \Config::get('lfm.prefix', 'package-filemanager'));
+$as = 'foostart.lfm.';
 $namespace = '\Foostart\Filemanager\Controllers';
 
 // make sure authenticated

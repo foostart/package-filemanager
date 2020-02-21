@@ -14,7 +14,7 @@
 
 
 ## How to use
- * Sample code : [laravel-filemanager-demo-events](https://github.com/UniSharp/laravel-filemanager-demo-events)
+ * Sample code : [package-filemanager-demo-events](https://github.com/foostart/package-filemanager-demo-events)
  * To use events you can add a listener to listen to the events.
 
     Snippet for `EventServiceProvider`

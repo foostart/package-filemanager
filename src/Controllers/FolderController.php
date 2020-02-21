@@ -36,14 +36,14 @@ class FolderController extends LfmController
             });
 
             array_push($root_folders, (object) [
-                'name' => trans('laravel-filemanager::lfm.title-' . $lang_key),
+                'name' => trans('package-filemanager::lfm.title-' . $lang_key),
                 'path' => parent::getInternalPath($root_folder_path),
                 'children' => $children,
                 'has_next' => ! ($lang_key == end($folder_types)),
             ]);
         }
 
-        return view('laravel-filemanager::tree')
+        return view('package-filemanager::tree')
             ->with(compact('root_folders'));
     }
 

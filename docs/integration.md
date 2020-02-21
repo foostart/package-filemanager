@@ -1,5 +1,5 @@
 ## Note
-Check `vendor/unisharp/laravel-filemanager/src/views/demo.blade.php`, which already integrated all options from below.
+Check `vendor/foostart/package-filemanager/src/views/demo.blade.php`, which already integrated all options from below.
 
 ## WYSIWYG Editor Integration:
 ### Option 1: CKEditor
@@ -9,10 +9,10 @@ Check `vendor/unisharp/laravel-filemanager/src/views/demo.blade.php`, which alre
 <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 <script>
   var options = {
-    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token={{csrf_token()}}',
-    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token={{csrf_token()}}'
+    filebrowserImageBrowseUrl: '/package-filemanager?type=Images',
+    filebrowserImageUploadUrl: '/package-filemanager/upload?type=Images&_token={{csrf_token()}}',
+    filebrowserBrowseUrl: '/package-filemanager?type=Files',
+    filebrowserUploadUrl: '/package-filemanager/upload?type=Files&_token={{csrf_token()}}'
   };
 </script>
 ```
@@ -29,7 +29,7 @@ Check `vendor/unisharp/laravel-filemanager/src/views/demo.blade.php`, which alre
 
   ```html
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+  <script src="/vendor/foostart/laravel-ckeditor/adapters/jquery.js"></script>
   <script>
   $('textarea.my-editor').ckeditor(options);
   </script>
@@ -56,7 +56,7 @@ Check `vendor/unisharp/laravel-filemanager/src/views/demo.blade.php`, which alre
       var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
       var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
 
-      var cmsURL = editor_config.path_absolute + 'laravel-filemanager?field_name=' + field_name;
+      var cmsURL = editor_config.path_absolute + 'package-filemanager?field_name=' + field_name;
       if (type == 'image') {
         cmsURL = cmsURL + "&type=Images";
       } else {
@@ -98,7 +98,7 @@ $(document).ready(function(){
 
     // Define function to open filemanager window
     var lfm = function(options, cb) {
-        var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
+        var route_prefix = (options && options.prefix) ? options.prefix : '/package-filemanager';
         window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
         window.SetUrl = cb;
     };
@@ -155,7 +155,7 @@ If you are going to use filemanager independently, meaning set the value of an i
 1. Import lfm.js(run `php artisan vendor:publish` if you need).
 
     ```html
-    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
+    <script src="/vendor/package-filemanager/js/lfm.js"></script>
     ```
 
 1. Init filemanager with type. (requires jQuery)
@@ -182,7 +182,7 @@ In case you are developing javascript application and you want dynamically to tr
 ```javascript
 var lfm = function(options, cb) {
 
-	var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
+	var route_prefix = (options && options.prefix) ? options.prefix : '/package-filemanager';
 
 	window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
 	window.SetUrl = cb;
@@ -200,5 +200,5 @@ lfm({type: 'image', prefix: 'prefix'}, function(url, path) {
 ## Embed file manager
 
 ```html
-<iframe src="/laravel-filemanager" style="width: 100%; height: 500px; overflow: hidden; border: none;"></iframe>
+<iframe src="/package-filemanager" style="width: 100%; height: 500px; overflow: hidden; border: none;"></iframe>
 ```

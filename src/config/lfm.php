@@ -15,7 +15,7 @@ return [
     'middlewares' => ['web'],
 
     // The url to this package. Change it if necessary.
-    'url_prefix' => 'laravel-filemanager',
+    'url_prefix' => 'package-filemanager',
 
     /*
     |--------------------------------------------------------------------------
@@ -115,7 +115,7 @@ return [
     'should_change_file_mode' => true,
 
     // available since v1.3.0
-    // only when '/laravel-filemanager?type=Files'
+    // only when '/package-filemanager?type=Files'
     'valid_file_mimetypes' => [
         'image/jpeg',
         'image/pjpeg',

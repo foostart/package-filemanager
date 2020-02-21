@@ -48,7 +48,7 @@ class ItemsController extends LfmController
 
     private function composeViewName($view_type = 'grid')
     {
-        return "laravel-filemanager::$view_type-view";
+        return "package-filemanager::$view_type-view";
     }
 
     private function getStartupViewFromConfig($default = 'grid')

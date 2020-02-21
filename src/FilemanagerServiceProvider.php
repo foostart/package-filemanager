@@ -21,20 +21,20 @@ class FilemanagerServiceProvider extends ServiceProvider
             include __DIR__ . '/routes.php';
         }
 
-        $this->loadTranslationsFrom(__DIR__.'/lang', 'laravel-filemanager');
+        $this->loadTranslationsFrom(__DIR__.'/lang', 'package-filemanager');
 
-        $this->loadViewsFrom(__DIR__.'/views', 'laravel-filemanager');
+        $this->loadViewsFrom(__DIR__.'/views', 'package-filemanager');
 
         $this->publishes([
             __DIR__ . '/config/lfm.php' => base_path('config/lfm.php'),
         ], 'lfm_config');
 
         $this->publishes([
-            __DIR__.'/../public' => public_path('vendor/laravel-filemanager'),
+            __DIR__.'/../public' => public_path('vendor/package-filemanager'),
         ], 'lfm_public');
 
         $this->publishes([
-            __DIR__.'/views'  => base_path('resources/views/vendor/laravel-filemanager'),
+            __DIR__.'/views'  => base_path('resources/views/vendor/package-filemanager'),
         ], 'lfm_view');
 
         $this->publishes([
@@ -49,7 +49,7 @@ class FilemanagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('laravel-filemanager', function () {
+        $this->app->singleton('package-filemanager', function () {
             return true;
         });
     }
