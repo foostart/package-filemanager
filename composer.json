@@ -44,7 +44,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Foostart\\Filemanager\\LaravelFilemanagerServiceProvider"
+        "Foostart\\Filemanager\\FilemanagerServiceProvider"
       ],
       "aliases": {
       }

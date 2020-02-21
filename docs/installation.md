@@ -20,7 +20,7 @@
     Add service providers
 
     ```php
-    Foostart\Filemanager\LaravelFilemanagerServiceProvider::class,
+    Foostart\Filemanager\FilemanagerServiceProvider::class,
     Intervention\Image\ImageServiceProvider::class,
     ```
 
