@@ -4,6 +4,7 @@ namespace Foostart\Filemanager\Traits;
 
 use Illuminate\Support\Facades\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Illuminate\Support\Str;
 
 trait LfmHelpers
 {
@@ -268,7 +269,7 @@ trait LfmHelpers
      */
     private function removeFirstSlash($path)
     {
-        if (starts_with($path, $this->ds)) {
+        if (Str::startsWith($path, $this->ds)) {
             $path = substr($path, 1);
         }
 
@@ -284,7 +285,7 @@ trait LfmHelpers
     private function removeLastSlash($path)
     {
         // remove last slash
-        if (ends_with($path, $this->ds)) {
+        if (Str::endsWith($path, $this->ds)) {
             $path = substr($path, 0, -1);
         }
 
@@ -332,7 +333,7 @@ trait LfmHelpers
      */
     public function isProcessingImages()
     {
-        return lcfirst(str_singular(request('type', '') ?: '')) === 'image';
+        return lcfirst(Str::singular(request('type', '') ?: '')) === 'image';
     }
 
     /**
@@ -518,7 +519,7 @@ trait LfmHelpers
     {
         $mime_type = $this->getFileType($file);
 
-        return starts_with($mime_type, 'image');
+        return Str::startsWith($mime_type, 'image');
     }
 
     /**
