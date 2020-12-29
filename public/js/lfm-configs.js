@@ -21,7 +21,7 @@ $(document).ready(function () {
 
             this.on('click', function (e) {
                 
-                var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
+                var route_prefix = (options && options.prefix) ? options.prefix : '/package-filemanager';
                 localStorage.setItem('target_input', $(this).data('input'));
                 localStorage.setItem('target_preview', $(this).data('preview'));
                 localStorage.setItem('target_dir', $(this).data('dir'));
