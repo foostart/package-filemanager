@@ -57,15 +57,17 @@
     </div>
 </div>
 
-{!! html()->script('packages/foostart/js/vendor/jquery-2.2.4.min.js') !!}
-{!! html()->script('packages/foostart/js/vendor/bootstrap-3.3.7.min.js') !!}
+<script src="{{ asset('packages/foostart/js/vendor/jquery-2.2.4.min.js') }}"></script>
+<script src="{{ asset('packages/foostart/js/vendor/bootstrap-3.3.7.min.js') }}"></script>
+
 <script>
     var route_prefix = "{{ url(config('lfm.url_prefix', config('lfm.prefix'))) }}";
 </script>
 
 <!-- CKEditor init -->
-{!! html()->script('packages/foostart/js/vendor/ckeditor.js') !!}
-{!! html()->script('packages/foostart/js/vendor/jquery.js') !!}
+<script src="{{ asset('packages/foostart/js/vendor/ckeditor.js') }}"></script>
+<script src="{{ asset('packages/foostart/js/vendor/jquery.js') }}"></script>
+
 
 <script>
     $('textarea[name=ce]').ckeditor({
@@ -122,7 +124,7 @@
 </script>
 
 <link rel="stylesheet" href="{{ asset('vendor/package-filemanager/css/summernote.css') }}">
-{!! html()->script('packages/foostart/js/vendor/summernote.js') !!}
+<script src="{{ asset('packages/foostart/js/vendor/summernote.js') }}"></script>
 
 <script>
     $(document).ready(function () {

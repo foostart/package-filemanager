@@ -22,8 +22,8 @@
     {{-- <link rel="stylesheet" href="{{ asset('/vendor/package-filemanager/css/lfm.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('vendor/package-filemanager/css/mfb.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/package-filemanager/css/dropzone.min.css') }}">
-    {!! html()->script('packages/foostart/js/vendor/jquery-2.2.4.min.js') !!}
-    {!! html()->script('packages/foostart/js/vendor/bootstrap-3.3.7.min.js') !!}
+    <script src="{{ asset('packages/foostart/js/vendor/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('packages/foostart/js/vendor/bootstrap-3.3.7.min.js') }}"></script>
 
 </head>
 <body>
