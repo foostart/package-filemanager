@@ -14,7 +14,7 @@
 
     <title>{{ trans('package-filemanager::lfm.title-page') }}</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('vendor/package-filemanager/img/folder.png') }}">
-    <link rel="stylesheet" href="{{ asset('bootstrap-3.3.7.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('packages/foostart/css/bootstrap-3.3.7.min.css') }}">
     <link rel="stylesheet" href="{{ asset('packages/foostart/css/font-awesome-4.7.0.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/package-filemanager/css/cropper.min.css') }}">
     <style>{!! \File::get(base_path('vendor/foostart/package-filemanager/public/css/lfm.css')) !!}</style>
